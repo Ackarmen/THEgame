@@ -33,6 +33,7 @@ const useGames = () => {
       return lastPage.next ? allPages.length + 1 : undefined;
     },
     staleTime: ms("24h"),
+    initialPageParam: 1,
   });
 };
 
