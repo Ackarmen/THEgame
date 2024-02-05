@@ -1,5 +1,7 @@
 import axios, { AxiosRequestConfig } from "axios";
 
+const apiKey = import.meta.env.VITE_GAME_API_KEY
+
 export interface FetchResponse<T> {
   count: number;
   next: string | null;
@@ -8,7 +10,7 @@ export interface FetchResponse<T> {
 const axiosInstance = axios.create({
   baseURL: "https://api.rawg.io/api",
   params: {
-    key: "ea76e270d9694acba60623300823de22",
+    key: apiKey,
   },
 });
 
